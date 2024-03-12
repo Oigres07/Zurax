@@ -1,3 +1,9 @@
+## 0.0.3 (March 12, 2024)
+
+### Fixed
+
+- No compilation.
+
 ## 0.0.2 (March 12, 2024)
 
 ### Fixed
