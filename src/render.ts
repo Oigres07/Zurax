@@ -1,6 +1,6 @@
 import { Configuration } from './types';
 
-export function zurax(type: string | Function, props: string | EventListenerOrEventListenerObject | null, ...args: (string | { type: typeof type; props: typeof props; children: typeof args })[]) {
+export function zurax(type: string | Function, props: { [key: string]: string | EventListenerOrEventListenerObject | null }, ...args: (string | { type: typeof type; props: typeof props; children: typeof args })[]) {
   const children = Array().concat(...args) as typeof args;
 
   return { type, props, children };
@@ -29,10 +29,10 @@ export function render(node: ReturnType<typeof zurax>, confg?: Configuration) {
       if (key.startsWith('on')) {
         const event = key.slice(2);
 
-        return element.addEventListener(event, node.props![key as keyof typeof node.props] as EventListenerOrEventListenerObject);
+        return element.addEventListener(event, node.props![key] as EventListenerOrEventListenerObject);
       }
 
-      return element.setAttribute(key, node.props![key as keyof typeof node.props] as string);
+      return element.setAttribute(key, node.props![key] as string);
     });
   }
 
