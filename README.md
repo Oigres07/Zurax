@@ -28,7 +28,7 @@ For the usage of the package, two files are required:
 ```jsx
 /** @jsx zurax */
 
-import { zurax, render } from '../../src';
+import { zurax, render } from 'zurax';
 
 const App = ({ title }) => <h1>{title}</h1>;
 
