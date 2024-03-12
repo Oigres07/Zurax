@@ -1,0 +1,26 @@
+{
+  "name": "zurax",
+  "description": "A Virtual DOM application.",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sercrac07/Zurax"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "tsc"
+  },
+  "keywords": [
+    "vdom",
+    "dom"
+  ],
+  "author": "Sercrac07",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}
